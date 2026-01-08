@@ -1,102 +1,34 @@
-let datos = {};
-const usuarios = {
-  "80306": { CLAVE: "1234", NOMBRE: "Sergio" },
-  "admin": { CLAVE: "admin123", NOMBRE: "Administrador" },
-  "80306": { CLAVE: "1234", NOMBRE: "Sergio" },
-  "80218": { CLAVE: "MONO218", NOMBRE: "Marcos" },
-  "80211": { CLAVE: "U598983", NOMBRE: "Roman" },
-  "80191": { CLAVE: "C80191", NOMBRE: "Luis" },
-  "80190": { CLAVE: "C80190", NOMBRE: "Andrea" },
-  "80225": { CLAVE: "C80225", NOMBRE: "Juan" },
-  "80217": { CLAVE: "VN217", NOMBRE: "Vanesa" },
-  "80224": { CLAVE: "C80224", NOMBRE: "Angel" },
-  "80216": { CLAVE: "coky80216", NOMBRE: "Oscar" },
-  "80248": { CLAVE: "DONI2025", NOMBRE: "Jonathan" },
-  "80263": { CLAVE: "luis123", NOMBRE: "Luis" },
-  "80229": { CLAVE: "C80229", NOMBRE: "Roberto" },
-  "80235": { CLAVE: "ASTOR1972", NOMBRE: "Alejandro" },
-  "80226": { CLAVE: "juli226", NOMBRE: "Juliana" },
-  "80227": { CLAVE: "C80227", NOMBRE: "Alejandro" },
-  "80228": { CLAVE: "MV2122", NOMBRE: "Vanesa" },
-  "80252": { CLAVE: "80252", NOMBRE: "Nicolas" },
-  "80272": { CLAVE: "Depalma2152", NOMBRE: "Cristian" },
-  "80273": { CLAVE: "Santi273", NOMBRE: "Santiago" },
-  "80274": { CLAVE: "C80274", NOMBRE: "Nestor" },
-  "80275": { CLAVE: "Hugo", NOMBRE: "Hugo" },
-  "80277": { CLAVE: "C80277", NOMBRE: "Natalia" },
-  "80299": { CLAVE: "C80299", NOMBRE: "Alejo" },
-  "80161": { CLAVE: "RMM16180", NOMBRE: "Rodolfo" },
-  "80232": { CLAVE: "CATA8032", NOMBRE: "Jose" },
-  "80242": { CLAVE: "80242", NOMBRE: "Luis" },
-  "80258": { CLAVE: "DAM10", NOMBRE: "Ivan" },
-  "80260": { CLAVE: "1601BVSP", NOMBRE: "Gonzalo" },
-  "80172": { CLAVE: "MA172", NOMBRE: "Mario" },
-  "80271": { CLAVE: "C80271", NOMBRE: "Gabriel" },
-  "80280": { CLAVE: "MAIDANA280", NOMBRE: "Lucas" },
-  "80285": { CLAVE: "C80285", NOMBRE: "Alexis" },
-  "80286": { CLAVE: "091120F", NOMBRE: "Carla" },
-  "80297": { CLAVE: "1a2b3c4d5e", NOMBRE: "Angel" },
-  "80300": { CLAVE: "C80300", NOMBRE: "Maximiliano" },
-  "80301": { CLAVE: "LUANA147", NOMBRE: "Luana" },
-  "80307": { CLAVE: "J2311", NOMBRE: "Jonathan" },
-  "80308": { CLAVE: "Luki308", NOMBRE: "Lucas" },
-  "80309": { CLAVE: "LOLA309", NOMBRE: "Natasha" },
-  "80311": { CLAVE: "NAHU311", NOMBRE: "Nahuel" },
-  "80312": { CLAVE: "NERINA312", NOMBRE: "Nerina" },
-  "80316": { CLAVE: "Chachi15", NOMBRE: "Georgina" },
-  "80317": { CLAVE: "CLAU1984", NOMBRE: "Claudio" },
-  "80318": { CLAVE: "cele534593Be", NOMBRE: "Celeste" },
-  "80319": { CLAVE: "Giovanna2016", NOMBRE: "Ivan" },
-  "80321": { CLAVE: "Felipe14", NOMBRE: "Mauro" },
-  "80322": { CLAVE: "Ernesto322", NOMBRE: "Ernesto" },
-  "80326": { CLAVE: "Flor2025", NOMBRE: "Florencia" },
-  "80327": { CLAVE: "nico.327", NOMBRE: "Nicolas" },
-  "80328": { CLAVE: "NOS18285", NOMBRE: "Nicolas" },
-  "80329": { CLAVE: "EMMA2018", NOMBRE: "Matias" },
-  "80330": { CLAVE: "G1745", NOMBRE: "Gisela" },
-  "80331": { CLAVE: "37106585N", NOMBRE: "Geronimo" },
-  "80332": { CLAVE: "EMMABENJA332", NOMBRE: "Lucas" },
-  "80334": { CLAVE: "THAIS11", NOMBRE: "Milagros" },
-  "80335": { CLAVE: "xiorenaz", NOMBRE: "Ivana" },
-  "80336": { CLAVE: "C80336", NOMBRE: "Walter" },
-  "80338": { CLAVE: "MELLIS02", NOMBRE: "Ricardi Carlos" },
-  "80220": { CLAVE: "marcos220", NOMBRE: "Marcos" },
-  "80207": { CLAVE: "80207", NOMBRE: "Omar" },
-  "80182": { CLAVE: "80182", NOMBRE: "Jorge" },
-  "80221": { CLAVE: "80221", NOMBRE: "Marisa" },
-  "80236": { CLAVE: "80236", NOMBRE: "Damian" },
-  "80219": { CLAVE: "Nico219", NOMBRE: "Nicolas" },
-  "80238": { CLAVE: "cata", NOMBRE: "David" },
-  "80241": { CLAVE: "5053", NOMBRE: "Analia" },
-  "80269": { CLAVE: "80269", NOMBRE: "Maria" },
-  "80292": { CLAVE: "80292", NOMBRE: "Silvina" },
-  "80302": { CLAVE: "kalel80302", NOMBRE: "Nicolas" },
-  "80310": { CLAVE: "80310", NOMBRE: "Juan Cruz" },
-  "80313": { CLAVE: "38294688", NOMBRE: "Dana" },
-  "80315": { CLAVE: "25203018", NOMBRE: "Macarena" },
-  "80320": { CLAVE: "80320", NOMBRE: "Elizabeth" },
-  "80333": { CLAVE: "40057938", NOMBRE: "Irina" },
-    "80339": { CLAVE: "80339", NOMBRE: "Leandro" },
-    "80340": { CLAVE: "80340", NOMBRE: "Juan Manuel" },
-    "80341": { CLAVE: "80341", NOMBRE: "Florencia" },
-    "80342": { CLAVE: "80342", NOMBRE: "Juan" },
-    "80343": { CLAVE: "80343", NOMBRE: "Osmar" },
-    "80344": { CLAVE: "80344", NOMBRE: "Karina" },
-    "80345": { CLAVE: "80345", NOMBRE: "Valeria" },
-    "80346": { CLAVE: "80346", NOMBRE: "Agustina" },
-    "80347": { CLAVE: "80347", NOMBRE: "Vanesa" },
-    "80348": { CLAVE: "80348", NOMBRE: "Ariel" },
-    "80349": { CLAVE: "80349", NOMBRE: "Milagros" },
-    "80350": { CLAVE: "80350", NOMBRE: "Marilu" }
+let usuarios = {};
+async function cargarUsuarios() {
+  const response = await fetch("usuarios.csv");
+  const texto = await response.text();
+  const lineas = texto.split("\n").filter(l => l.trim() !== "");
 
-};
+  usuarios = {};
+
+  for (let i = 1; i < lineas.length; i++) {
+    const [id, clave, nombre] = lineas[i].split(",");
+    usuarios[id] = {
+      CLAVE: clave,
+      NOMBRE: nombre
+    };
+  }
+
+  console.log("Usuarios cargados:", usuarios);
+}
+
 
 let usuarioActual = null;
 
 async function iniciarSesion() {
+  if (Object.keys(usuarios).length === 0) {
+    await cargarUsuarios();
+  }
+
   const usuario = document.getElementById("usuario").value.trim();
   const clave = document.getElementById("clave").value.trim();
   const user = usuarios[usuario];
+
 
   if (user && user.CLAVE === clave) {
     usuarioActual = usuario;
