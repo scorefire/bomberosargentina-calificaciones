@@ -66,7 +66,7 @@ function cambiarMes() {
 }
 
 async function cargarDatos() {
-  const url = "calificaciones.csv";
+  const url = "https://docs.google.com/spreadsheets/d/1QTwxp5aIYmBT4Zv5_EUyaTXp0mgoOYRr_1Yzw37aync/export?format=csv&gid=0";
   const response = await fetch(url);
   const texto = await response.text();
   const lineas = texto.split("\n").filter(l => l.trim() !== "");
