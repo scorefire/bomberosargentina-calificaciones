@@ -1,0 +1,4 @@
+id,usuario,clave,rol
+admin,admin,1234,admin
+80272,cristian,abcd,usuario
+80123,juan,pass123,usuario
