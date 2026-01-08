@@ -277,7 +277,7 @@ function previsualizarCSV() {
 }
 
 function mostrarPorcentajeHT(usuarioId) {
-  fetch('https://raw.githubusercontent.com/bomberosc80-app/calificaciones-app/main/porcentajeht.csv')
+  fetch("https://docs.google.com/spreadsheets/d/1XOtsxFNYi2VW2f-w1ym5Prw93ctHb0PAtoxpyRgO_xc/export?format=csv&gid=0")
     .then(res => res.text())
     .then(data => {
       const lineas = data.trim().split("\n");
