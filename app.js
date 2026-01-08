@@ -1,7 +1,7 @@
 let usuarios = {};
 async function cargarUsuarios() {
   const response = await fetch(
-    "https://docs.google.com/spreadsheets/d/1GuFdjXY38mc7_EBMA4HxU18L_-EmHCnaOGyfNo3u85w/export?format=csv&gid=0");
+    "https://docs.google.com/spreadsheets/d/1QTwxp5aIYmBT4Zv5_EUyaTXp0mgoOYRr_1Yzw37aync/export?format=csv&gid=0");
   
   const texto = await response.text();
   const lineas = texto.split("\n").filter(l => l.trim() !== "");
