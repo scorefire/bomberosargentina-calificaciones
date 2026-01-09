@@ -60,27 +60,24 @@ body {
 
 }
 
-h1,  {
+/* TITULOS */
+h1 {
   margin: 0;
+  font-size: 1.6rem;
   color: #ff3b3b;
-  font-weight: 600;
 }
 
- h2, {
-  background: linear-gradient(135deg, #ff1f1f, #b30000);
-  border: none;
-  border-radius: 14px;
-  padding: 16px;
-  font-size: 1rem;
-  font-weight: bold;
-  color: white;
- }
-
-.subtitulo {
-  text-align: center;
-  font-size: 1.1rem;
-  color: #ff3b3b;
-  margin: 0;
+h2 {
+  margin-top: 6px;
+  margin-bottom: 30px;
+  font-weight: normal;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+.fire {
+  color: #ff2a2a; /* rojo fuego */
+  font-style: italic;
+  font-weight: 500;
 }
 
 /* =====================
