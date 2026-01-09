@@ -239,7 +239,7 @@ function renderCalificaciones(mesSeleccionado) {
       Firmado digitalmente por:
       <br>
       <img
-        src="https://bomberosc80-app.github.io/calificaciones-app/firma.png"
+        src="https://scorefire.github.io/bomberosargentina-calificaciones/firma.png"
         alt="Firma Jefe"
         class="imagen-firma"
         draggable="false"
