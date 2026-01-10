@@ -15,22 +15,6 @@ body {
   flex-direction: column;
 }
 
-.bienvenida {
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.bienvenida h2 {
-  color: #ff3b3b;
-  font-size: 1.3rem;
-  margin-bottom: 4px;
-}
-
-.bienvenida p {
-  font-size: 0.85rem;
-  opacity: 0.8;
-}
-
 /* Footer siempre abajo */
 .footer {
   margin-top: auto;
