@@ -42,7 +42,12 @@ async function iniciarSesion() {
     await cargarDatos();
     cambiarMes();
     actualizarVisibilidadFooter();
+      // suponiendo que "usuarioLogueado" es el objeto del usuario
+      document.getElementById("bienvenidaNombre").textContent =
+      `Bienvenido, ${usuarioLogueado.nombre}`;
+      document.getElementById("bienvenida").style.display = "block";
 
+    
   } else {
     alert("Usuario o clave incorrectos.");
   }
