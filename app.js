@@ -333,3 +333,17 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+function ayudaWhatsApp() {
+  const mensaje = encodeURIComponent(
+    "Hola, tengo problemas para ingresar a la app de calificaciones. ¿Me pueden ayudar?"
+  );
+
+  // Reemplazá por el número real de asistencia (con código de país)
+  const telefono = "5493329304565";
+
+  window.open(
+    `https://wa.me/${telefono}?text=${mensaje}`,
+    "_blank"
+  );
+}
