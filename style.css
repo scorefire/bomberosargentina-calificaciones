@@ -126,6 +126,20 @@ button:disabled {
   box-shadow: none;
 }
 
+.help-btn {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  margin-top: 14px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.help-btn:hover {
+  color: #ff8080;
+}
+
 /* =====================
    HEADER
 ===================== */
